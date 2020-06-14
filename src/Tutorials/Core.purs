@@ -104,3 +104,6 @@ instance le2 :: LE a b => LE (S a) (S b)
 
 eval :: forall term value. IsSin value => Eval term value => term -> value
 eval _ = auto
+
+instance showZ :: Show Z where show Z = show $ asInt Z
+instance showS :: IsNat n => Show (S n) where show s = show $ asInt s
