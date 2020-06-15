@@ -9,7 +9,7 @@ data Matrix m n a
 class PyInferType a (s :: Symbol) | a -> s
 instance inferInt :: PyInferType Int "i4"
 else
-instance inferNum :: PyInferType Number "f"
+instance inferNum :: PyInferType Number "f8"
 else
 instance inferBool :: PyInferType Boolean "?"
 else
